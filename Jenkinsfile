@@ -5,21 +5,21 @@ pipeline {
         stage('K Infra Deployment') {
             steps {
                 echo 'K Infra Deployment..'
-                which terraform
+                /usr/bin/terraform --help
                 sleep 10
             }
         }
         stage('K Infra Validation') {
             steps {
                 echo 'Validation..'
-                which terraform
+                /usr/bin/terraform --help
                 sleep 10
             }
         }
         stage('Deploy FW') {
             steps {
                 echo 'Deploying Firewalls....'
-                while terraform
+                /usr/bin/terraform --help 
                 sleep 10
             }
         }
