@@ -2,21 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('K Infra Deployment') {
             steps {
-                echo 'Building..'
-                sleep 5
+                echo 'K Infra Deployment..'
+                sleep 60
             }
         }
-        stage('Test') {
+        stage('K Infra Validation') {
             steps {
-                echo 'Testing..'
-                sleep 5
+                echo 'Validation..'
+                sleep 30
             }
         }
-        stage('Deploy') {
+        stage('Deploy FW') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying Firewalls....'
                 sleep 5
             }
         }
