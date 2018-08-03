@@ -5,19 +5,22 @@ pipeline {
         stage('K Infra Deployment') {
             steps {
                 echo 'K Infra Deployment..'
-                sleep 60
+                which terraform
+                sleep 10
             }
         }
         stage('K Infra Validation') {
             steps {
                 echo 'Validation..'
-                sleep 30
+                which terraform
+                sleep 10
             }
         }
         stage('Deploy FW') {
             steps {
                 echo 'Deploying Firewalls....'
-                sleep 5
+                while terraform
+                sleep 10
             }
         }
     }
