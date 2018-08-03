@@ -23,5 +23,19 @@ pipeline {
                 sleep 10
             }
         }
+        stage('K Service Deployment') {
+            steps {
+                echo 'K Service Deployment....'
+                sh '/usr/bin/terraform --help'
+                sleep 10
+            }
+        }
+        stage('Python Test Framework') {
+            steps {
+                echo 'Python Test Framework...'
+                sh '/usr/bin/terraform --help'
+                sleep 10
+            }
+        }
     }
 }
